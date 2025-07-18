@@ -1,50 +1,85 @@
 # NodeQ Validator Network
 
-A modern, decentralized validator deployment platform supporting multiple blockchain networks with real-time monitoring and automated deployment.
+A comprehensive decentralized compute and validator deployment platform with multi-chain support, featuring advanced validator management capabilities.
 
 ## 🚀 Features
 
-- **Multi-Chain Support**: Deploy validators for Ethereum, Polygon, Solana, Polkadot, Cosmos, Cardano, Avalanche, and Tezos
-- **One-Click Deployment**: Streamlined deployment process with automated setup
-- **Real-Time Monitoring**: Live resource usage, uptime tracking, and performance metrics
-- **Staking Management**: Integrated staking requirements and APY tracking
-- **Modern UI**: Responsive design with dark theme and smooth animations
-- **Web3 Integration**: Wallet connectivity and blockchain interaction
-- **Status Tracking**: Real-time validator status (active, pending, suspended)
+### Core Platform
+- **Multi-Chain Support**: Deploy validators on Ethereum, Polygon, Solana, and more
+- **One-Click Deployment**: Streamlined validator node deployment process
+- **Real-Time Monitoring**: Live metrics and performance tracking
+- **Template System**: Pre-configured validator templates for different chains
+- **Wallet Integration**: Seamless Web3 wallet connectivity
 
-## 🛠 Tech Stack
+### Advanced Validator Management
+- **Validator Control Panel**: Complete node management interface
+- **Real-Time Terminal**: Interactive command-line interface for direct node access
+- **Command Reference**: Comprehensive guide to validator commands and operations
+- **Connection Management**: Secure SSH, API, and RPC connection options
+- **Performance Analytics**: Detailed metrics and performance insights
 
-- **Frontend**: React 18, TypeScript, Tailwind CSS
-- **State Management**: React Context API
-- **Icons**: Lucide React
-- **Build Tool**: Vite
-- **Deployment**: Vercel/Netlify ready
+## 🏗️ Architecture
 
-## 📋 Supported Networks
+```
+src/
+├── components/
+│   ├── ValidatorConnectionModal.tsx    # Node connection interface
+│   ├── ValidatorCommands.tsx           # Command reference guide
+│   ├── ValidatorTerminal.tsx           # Interactive terminal
+│   └── ...                            # Other UI components
+├── pages/
+│   ├── ValidatorDashboard.tsx          # Main validator dashboard
+│   ├── ValidatorControl.tsx            # Node control interface
+│   └── ...                            # Other pages
+└── contexts/
+    └── NodeContext.tsx                 # Node state management
+```
 
-| Network | Staking Requirement | APY Range | Status |
-|---------|-------------------|-----------|---------|
-| Ethereum | 0.1 ETH | 4-7% | ✅ Active |
-| Polygon | 10 MATIC | 8-12% | ✅ Active |
-| Solana | 0.1 SOL | 6-8% | 🔄 Pending |
-| Polkadot | 0.1 DOT | 10-15% | ✅ Active |
-| Cosmos | 0.1 ATOM | 7-10% | ✅ Active |
-| Cardano | 10 ADA | 4-6% | ✅ Active |
-| Avalanche | 0.1 AVAX | 9-11% | 🔄 Pending |
-| Tezos | 10 XTZ | 5-7% | ✅ Active |
+## 🛠️ Validator Management Features
 
-## 🚀 Quick Start
+### 1. Validator Dashboard
+- **Overview Tab**: High-level metrics and performance indicators
+- **Node Control**: Direct node management and monitoring
+- **Commands Reference**: Complete command documentation
+- **Terminal Access**: Real-time command execution
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-- Web3 wallet (MetaMask, WalletConnect, etc.)
+### 2. Connection Management
+- **Multiple Protocols**: SSH, REST API, and JSON-RPC support
+- **Security Features**: Password and SSH key authentication
+- **Connection Testing**: Built-in connection validation
+- **SSL/TLS Support**: Encrypted communication
 
-### Installation
+### 3. Command System
+- **System Commands**: Service management, updates, monitoring
+- **Validator Commands**: Node status, logs, configuration
+- **Security Commands**: Audits, firewall management
+- **Maintenance Commands**: Backups, optimization, cleanup
+
+### 4. Real-Time Terminal
+- **Interactive Interface**: Full-featured terminal emulator
+- **Command History**: Persistent command history with navigation
+- **Syntax Highlighting**: Enhanced command output display
+- **Copy/Paste Support**: Easy command and output sharing
+
+## 📊 Monitoring & Analytics
+
+### Real-Time Metrics
+- CPU, Memory, and Storage usage
+- Network activity and bandwidth
+- Uptime and availability tracking
+- Peer connections and sync status
+
+### Performance Indicators
+- Block proposal success rate
+- Validator rewards and APY
+- Network participation metrics
+- System health monitoring
+
+## 🔧 Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/nodeq-validator-network.git
+git clone https://github.com/your-username/nodeq-validator-network.git
 cd nodeq-validator-network
 
 # Install dependencies
@@ -57,81 +92,90 @@ npm run dev
 npm run build
 ```
 
-### Environment Variables
+## 🚀 Usage
 
-Create a `.env` file in the root directory:
+### 1. Deploy a Validator
+1. Navigate to the Deployments page
+2. Select your preferred blockchain network
+3. Choose a validator template
+4. Configure node specifications
+5. Deploy and monitor progress
 
-```env
-VITE_APP_TITLE=NodeQ Validator Network
-VITE_APP_DESCRIPTION=Decentralized validator deployment platform
-VITE_WALLET_CONNECT_PROJECT_ID=your_project_id_here
+### 2. Connect to Your Node
+1. Go to the Validator Dashboard
+2. Click "Connect Node"
+3. Choose connection method (SSH/API/RPC)
+4. Enter connection details
+5. Test and establish connection
+
+### 3. Manage Your Validator
+1. Use the Node Control interface for basic operations
+2. Access the Terminal for advanced commands
+3. Reference the Commands guide for documentation
+4. Monitor performance in real-time
+
+## 🔒 Security Features
+
+- **Encrypted Connections**: All communications use SSL/TLS
+- **Authentication**: Multiple authentication methods supported
+- **Access Control**: Role-based permissions and access management
+- **Audit Logging**: Comprehensive activity tracking
+- **Firewall Integration**: Built-in security monitoring
+
+## 📚 Command Reference
+
+### System Commands
+```bash
+# Check system status
+systemctl status validator
+
+# Restart validator service
+sudo systemctl restart validator
+
+# Update system packages
+sudo apt update && sudo apt upgrade -y
+
+# Check disk usage
+df -h
 ```
 
-## 📁 Project Structure
+### Validator Commands
+```bash
+# Check validator status
+validator-cli status
 
-```
-src/
-├── components/          # Reusable UI components
-│   ├── DeployValidatorModal.tsx
-│   ├── DeploymentProgressModal.tsx
-│   ├── DeploymentSuccessModal.tsx
-│   └── ...
-├── pages/              # Page components
-│   ├── Validator.tsx   # Main validator page
-│   ├── Dashboard.tsx   # Dashboard overview
-│   └── ...
-├── contexts/           # React contexts
-│   └── NodeContext.tsx # Node state management
-├── assets/             # Static assets
-│   └── ChainsSymbols/  # Blockchain logos
-└── wallet/             # Web3 integration
-    └── web3modal.ts
+# View validator logs
+tail -n 100 /var/log/validator.log
+
+# Show configuration
+cat /etc/validator/config.yaml
+
+# List validator keys
+validator-cli keys list
 ```
 
-## 🔧 Configuration
+### Monitoring Commands
+```bash
+# Resource monitoring
+htop
 
-### Adding New Validator Networks
+# Network status
+netstat -tulpn
 
-1. Add chain logo to `src/assets/ChainsSymbols/`
-2. Update `VALIDATOR_CHAINS` array in `src/pages/Validator.tsx`
-3. Configure staking requirements and APY ranges
-
-### Customizing Deployment Flow
-
-Modify `src/components/DeployValidatorModal.tsx` to customize:
-- Deployment parameters
-- Resource allocation
-- Network configuration
-
-## 📊 Monitoring & Analytics
-
-The platform includes real-time monitoring for:
-- CPU, Memory, and Storage usage
-- Network uptime and performance
-- Staking rewards and APY
-- Validator status and health
+# Validator metrics
+validator-cli metrics
+```
 
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ### Development Setup
-
-```bash
-# Fork and clone the repository
-git clone https://github.com/yourusername/nodeq-validator-network.git
-
-# Create a feature branch
-git checkout -b feature/amazing-feature
-
-# Make your changes and commit
-git commit -m 'Add amazing feature'
-
-# Push to your fork
-git push origin feature/amazing-feature
-
-# Create a Pull Request
-```
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
 ## 📄 License
 
@@ -139,33 +183,25 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- 📧 Email: support@nodeq.network
-- 💬 Discord: [Join our community](https://discord.gg/nodeq)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/nodeq-validator-network/issues)
-- 📖 Documentation: [Wiki](https://github.com/yourusername/nodeq-validator-network/wiki)
+- **Documentation**: [Wiki](https://github.com/your-username/nodeq-validator-network/wiki)
+- **Issues**: [GitHub Issues](https://github.com/your-username/nodeq-validator-network/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/your-username/nodeq-validator-network/discussions)
 
-## 🌟 Star History
+## 🔮 Roadmap
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/nodeq-validator-network&type=Date)](https://star-history.com/#yourusername/nodeq-validator-network&Date)
-
-## 📈 Roadmap
-
-- [ ] **Q1 2024**: Multi-chain validator support
-- [ ] **Q2 2024**: Advanced monitoring dashboard
-- [ ] **Q3 2024**: Mobile app development
-- [ ] **Q4 2024**: Enterprise features
+- [ ] Multi-chain validator support expansion
+- [ ] Advanced analytics and reporting
+- [ ] Mobile application
+- [ ] API rate limiting and optimization
+- [ ] Enhanced security features
+- [ ] Community governance tools
 
 ## 🙏 Acknowledgments
 
-- [Ethereum Foundation](https://ethereum.org/)
-- [Polygon](https://polygon.technology/)
-- [Solana](https://solana.com/)
-- [Polkadot](https://polkadot.network/)
-- [Cosmos](https://cosmos.network/)
-- [Cardano](https://cardano.org/)
-- [Avalanche](https://www.avax.network/)
-- [Tezos](https://tezos.com/)
+- Built with React, TypeScript, and Tailwind CSS
+- Powered by Web3 technologies
+- Inspired by the decentralized validator community
 
 ---
 
-**Made with ❤️ by the NodeQ Team** 
+**NodeQ Validator Network** - Empowering decentralized infrastructure management. 
