@@ -1,0 +1,93 @@
+{
+  "name": "nodeq-validator-network",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A modern, decentralized validator deployment platform supporting multiple blockchain networks",
+  "keywords": [
+    "react",
+    "typescript",
+    "web3",
+    "blockchain",
+    "validator",
+    "deployment",
+    "ethereum",
+    "polygon",
+    "solana",
+    "polkadot",
+    "cosmos",
+    "cardano",
+    "avalanche",
+    "tezos"
+  ],
+  "author": {
+    "name": "NodeQ Team",
+    "email": "team@nodeq.network",
+    "url": "https://nodeq.network"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/nodeq-validator-network.git"
+  },
+  "homepage": "https://nodeq.network",
+  "bugs": {
+    "url": "https://github.com/yourusername/nodeq-validator-network/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.294.0",
+    "@web3modal/ethereum": "^3.5.7",
+    "@web3modal/react": "^3.5.7",
+    "viem": "^2.7.9",
+    "wagmi": "^2.5.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vitest": "^1.0.4",
+    "@vitest/ui": "^1.0.4",
+    "@vitest/coverage-v8": "^1.0.4"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+} 
